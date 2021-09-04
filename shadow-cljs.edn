@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["cljs"]
+
+ :dependencies
+ []
+
+ :builds
+ {:node {:target :node-library
+         :output-to "cljs_dist/core/node/interop.js"
+         :exports {:interop cljs.core.fn/interop}}
+
+  :web {:target :browser
+        :output-dir "cljs_dist/core/web"
+        :asset-path "/js"
+        :modules {:interop {:entries [cljs.core.fn]}}}}}
