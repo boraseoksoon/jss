@@ -1,5 +1,8 @@
-const { interop } = require("./cljs_dist/core/node/interop")
-console.log(interop("I'm JS")) 
+const { generate_code } = require("./cljs_dist/core/node/interop")
+
+const source = "let x = 10"
+generate_code(source)
+
 
 // global.test = require('./test.js');
 // interop(global.test)
