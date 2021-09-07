@@ -8,8 +8,6 @@
       			["./foo" :as foo]))
 
 (defn ^:export generate-code [source]  
-  (prn (str "let's walk " source))
-  
   (let [full-walk (aget walk "full")
       	AST (. acorn parse source)]
  		(defn each-walk [node] 

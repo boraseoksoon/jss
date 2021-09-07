@@ -38,3 +38,4 @@ resources/brepl_client.js
 .calva/
 .shadow-cljs/
 .lsp/
+cljs_dist/
